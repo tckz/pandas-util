@@ -7,7 +7,7 @@ import pandas as pd
 from tabulate import tabulate
 
 arg_parser = argparse.ArgumentParser()
-arg_parser.add_argument('--input', required=False)
+arg_parser.add_argument("--input", required=False)
 args = arg_parser.parse_args()
 
 fn = args.input
