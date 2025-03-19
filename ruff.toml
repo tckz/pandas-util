@@ -1,0 +1,10 @@
+target-version = "py312"
+
+line-length = 120
+
+[lint]
+extend-select = ["I"]
+
+[format]
+preview = true
+quote-style = "preserve"

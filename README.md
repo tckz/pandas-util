@@ -3,14 +3,13 @@ pandas-util
 
 # Requirements
 
-* rye  
-  https://rye.astral.sh/
+* uv
+  https://github.com/astral-sh/uv
 
 # Prerequisites
 
-* rye
+* uv
    ```
-   $ rye pin 3.12
-   $ rye sync
+   $ uv sync
    ```
 

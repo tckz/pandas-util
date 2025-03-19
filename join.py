@@ -9,9 +9,7 @@ import pandas as pd
 
 arg_parser = argparse.ArgumentParser()
 arg_parser.add_argument("--input", action="append", required=True)
-arg_parser.add_argument(
-    "--how", default="inner", choices=["outer", "left", "right", "inner", "cross"]
-)
+arg_parser.add_argument("--how", default="inner", choices=["outer", "left", "right", "inner", "cross"])
 args = arg_parser.parse_args()
 
 df = pd.read_table(args.input.pop(0))
