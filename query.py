@@ -13,11 +13,9 @@ arg_parser.add_argument("--input", required=False)
 arg_parser.add_argument("--engine", required=False)
 args = arg_parser.parse_args()
 
-fn = args.input
-if fn is None:
-    fn = sys.stdin
+fn = sys.stdin if args.input is None else args.input
 
 df = pd.read_table(fn)
 df = df.query(args.query, engine=args.engine)
 
-print(df.to_csv(sep="\t", index=False), end="")
+df.to_csv(sys.stdout, sep="\t", index=False)

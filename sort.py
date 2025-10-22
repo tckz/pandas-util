@@ -11,9 +11,7 @@ arg_parser.add_argument("--direction", action="append", required=False)
 arg_parser.add_argument("--input", required=False)
 args = arg_parser.parse_args()
 
-fn = args.input
-if fn is None:
-    fn = sys.stdin
+fn = sys.stdin if args.input is None else args.input
 
 df = pd.read_table(fn)
 asc = args.direction
@@ -25,4 +23,4 @@ else:
 # stableにするためにmergesort
 df = df.sort_values(by=args.column, ascending=asc, kind="mergesort")
 
-print(df.to_csv(sep="\t", index=False), end="")
+df.to_csv(sys.stdout, sep="\t", index=False)
