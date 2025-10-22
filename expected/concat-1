@@ -1,0 +1,15 @@
+col1	col2	col3	col4
+a	1.0		
+b	2.0		
+c	3.0		
+d	4.0		
+e	5.0		
+f	6.0		
+g	7.0		
+a		f2-col3-1	f2-col4-1
+b		f2-col3-2	f2-col4-2
+c		f2-col3-3	f2-col4-3
+d		f2-col3-4	f2-col4-4
+e		f2-col3-5	f2-col4-5
+f		f2-col3-6	f2-col4-6
+g		f2-col3-7	f2-col4-7
