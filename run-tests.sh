@@ -5,8 +5,8 @@ set -x
 uv run ./from-json.py --input testdata/f4.jsonl > actual/from-json-1
 uv run ./from-json.py < testdata/f4.jsonl > actual/from-json-2
 
-uv run ./table-format.py --input testdata/f1 --format github > actual/table-format-1
-uv run ./table-format.py < testdata/f2 > actual/table-format-2
+uv run ./to-table-format.py --input testdata/f1 --format github > actual/to-table-format-1
+uv run ./to-table-format.py < testdata/f2 > actual/to-table-format-2
 
 uv run ./sort.py --input testdata/f1 --column col1 --direction desc > actual/sort-1
 uv run ./sort.py --column col5 --direction asc <  testdata/f3 > actual/sort-2
