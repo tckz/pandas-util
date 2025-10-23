@@ -2,6 +2,9 @@
 
 set -x
 
+uv run ./to-json.py --input testdata/f1 > actual/to-json-1
+uv run ./to-json.py < testdata/f2 > actual/to-json-2
+
 uv run ./from-json.py --input testdata/f4.jsonl > actual/from-json-1
 uv run ./from-json.py < testdata/f4.jsonl > actual/from-json-2
 
