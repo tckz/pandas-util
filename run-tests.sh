@@ -8,6 +8,9 @@ uv run ./to-json.py < testdata/f2 > actual/to-json-2
 uv run ./from-json.py --input testdata/f4.jsonl > actual/from-json-1
 uv run ./from-json.py < testdata/f4.jsonl > actual/from-json-2
 
+uv run ./from-csv.py --input testdata/f5.csv > actual/from-csv-1
+uv run ./from-csv.py < testdata/f5.csv > actual/from-csv-2
+
 uv run ./to-table-format.py --input testdata/f1 --format github > actual/to-table-format-1
 uv run ./to-table-format.py < testdata/f2 > actual/to-table-format-2
 
